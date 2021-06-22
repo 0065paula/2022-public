@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heroSection {
+    background-image: url('/hero_bg.png');
+    background-size: 80%;
+    background-repeat: repeat-x;
+    max-height: 800px;
+    background-position-x: center;
+}
+
+@media (max-width:1024px) {
+    .heroSection {
+        background-size: 180%;
+    }
+}
+
+.preBanner {
+    background-image: url('/pattern.png');
+    /* background: rgb(43, 0, 128); */
+    background-position-y: 0;
+    background-repeat: repeat;
+    /* transition: background .2s ease-out; */
+}
+
+/* .preBanner:hover {
+    background-position-y: 10%;
+} */
+
+.titleClipText {
+    background-image: url('/pattern.png');
+    background-clip: text;
+    color: transparent;
+    background-size: 100%;
+
+    /* background-attachment: fixed; */
+}
+
+.jobCard {
+    @apply h-40 px-6 pt-6 shadow rounded-3xl;
+    transition: all .2s ease-in-out;
+    transform: translateY(0);
+}
+
+.jobCard:hover {
+    @apply shadow-lg;
+    transform: translateY(-5px);
+}
+
+.jobCard h3 {
+    @apply text-3xl font-semibold text-gray-900;
+}
+
+.visionCardWrapper {
+    border-image: url('/pattern.png');
+    border-image-slice: 20;
+    border-image-width: 8px;
+    border-image-repeat: round;
+}
+
+.aboutPage {
+    @apply w-full grid grid-cols-1 md:grid-cols-12 gap-24;   
+    min-height: calc(100vh - 12rem);
+}
+
+.cardDeck li:nth-child(n+2) {
+    
+}
