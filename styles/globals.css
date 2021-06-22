@@ -41,7 +41,54 @@
     @apply h-40 px-6 pt-6 shadow rounded-3xl;
     transition: all .2s ease-in-out;
     transform: translateY(0);
+    background-repeat: no-repeat;
+    background-position: right 10px center, center center;
 }
+
+.jobCard:first-child {
+    background-image: url('/1.png'),linear-gradient(180deg, #DAC3FF 0%, #EADDFF 100%);
+    background-size: 142px 101px, 100% 100%;
+}
+
+.jobCard:nth-child(2) {
+    background-image: url('/2.png'),linear-gradient(180deg, #4CF39F 0%, #99F6C7 100%);
+    background-size: 115px 96px, 100% 100%;
+}
+
+.jobCard:nth-child(3) {
+    background-image: url('/3.png'),linear-gradient(180deg, #44DAFB 0%, #C0FBFB 100%);
+    background-size: 97px 97px, 100% 100%;
+}
+
+.jobCard:nth-child(4) {
+    background-image: url('/4.png'),linear-gradient(180deg, #FFCB77 0%, #FFE3B6 100%);
+    background-size: 99px 98px, 100% 100%;
+}
+.jobCard:nth-child(5) {
+    background-image: url('/5.png'),linear-gradient(180deg, #86C2FE 0%, #BEDEFF 100%);
+    background-size: 113px 106px, 100% 100%;
+}
+
+.jobCard:nth-child(6) {
+    background-image: url('/6.png'),linear-gradient(180deg, #FAFF00 0%, #FDFF9F 100%);
+    background-size: 114px 89px, 100% 100%;
+}
+
+.jobCard:nth-child(7) {
+    background-image: url('/7.png'),linear-gradient(180deg, #A7ABFF 0%, #CCCFFF 100%);;
+    background-size: 115px 83px, 100% 100%;
+}
+
+.jobCard:nth-child(8) {
+    background-image: url('/8.png'),linear-gradient(180deg, #BBB7AA 0%, #E2DFD5 100%);
+    background-size: 60px 90px, 100% 100%;
+}
+
+.jobCard:nth-child(9) {
+    background-image: url('/9.png'),linear-gradient(180deg, #FF984E 0%, #FFCDA9 100%);
+    background-size: 96px 79px, 100% 100%;
+}
+
 
 .jobCard:hover {
     @apply shadow-lg;

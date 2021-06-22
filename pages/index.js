@@ -119,39 +119,39 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-6 gap-4 ">
           {/* 分布式存储 */} 
-          <div className="jobCard sm:col-span-2 md:col-span-4 bg-gradient-to-b from-purple-200 to-purple-100">
+          <div className="jobCard sm:col-span-2 md:col-span-4">
             <h3>分布式存储</h3>
           </div>
           {/* 虚拟化 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-green-400 to-green-200">
+          <div className="jobCard sm:col-span-2 md:col-span-2">
             <h3>虚拟化</h3>
           </div>
           {/* 软件定义网络 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-blue-400 to-green-100">
+          <div className="jobCard sm:col-span-2 md:col-span-2">
             <h3>软件定义网络</h3>
           </div>
           {/* 分布式管理平台 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-yellow-200 to-yellow-100">
+          <div className="jobCard sm:col-span-2 md:col-span-2">
             <h3>分布式管理平台</h3>
           </div>
           {/* 云原生 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-blue-300 to-blue-200">
+          <div className="jobCard sm:col-span-2 md:col-span-2">
             <h3>云原生</h3>
           </div>
           {/* 测试 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-yellow-400 to-yellow-200">
+          <div className="jobCard sm:col-span-2 md:col-span-2">
             <h3>测试</h3>
           </div>
           {/* 前端 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-indigo-300 to-indigo-200">
+          <div className="jobCard sm:col-span-2 md:col-span-2">
             <h3>前端</h3>
           </div>
           {/* 产品 */}
-          <div className="jobCard sm:col-span-2 md:col-span-1 bg-gradient-to-b from-gray-400 to-gray-300">
+          <div className="jobCard sm:col-span-2 md:col-span-1">
             <h3>产品</h3>
           </div>
           {/* 设计 */}
-          <div className="jobCard sm:col-span-2 md:col-span-1 bg-gradient-to-b from-red-400 to-red-200">
+          <div className="jobCard sm:col-span-2 md:col-span-1">
             <h3>设计</h3>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function Home() {
         <div className="aboutPage">
           {/* Heading Starts */}
           <div className="md:col-start-2 md:col-span-3">
-            <div className="sticky top-48 space-y-4">
+            <div className="sticky top-64 space-y-4">
               <h2 className="space-y-2">
                 <p className="text-2xl font-medium text-gray-900">成立于</p>
                 <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">2013 年</p>
@@ -215,7 +215,7 @@ export default function Home() {
         <div className="aboutPage">
           {/* Heading Starts */}
           <div className="md:col-start-2 md:col-span-3">
-            <div className="sticky top-48 space-y-4">
+            <div className="sticky top-64 space-y-4">
               <h2 className="space-y-2">
                 <p className="text-2xl text-gray-900">共获得</p>
                 <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">5 轮融资</p>
@@ -241,7 +241,7 @@ export default function Home() {
         <div className="aboutPage">
           {/* Heading Starts */}
           <div className="md:col-start-2 md:col-span-3">
-            <div className="sticky top-48 space-y-4">
+            <div className="sticky top-64 space-y-4">
               <h2 className="space-y-2">
                 <p className="text-2xl text-gray-900">服务</p>
                 <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">500+ 客户</p>
@@ -355,28 +355,43 @@ export default function Home() {
         {/* Why Content Starts */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
           <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-blue-600 transition-all">
-              <p className="text-2xl font-semibold text-blue-600 group-hover:text-white transition-all">专业成长</p>
-              <p className="text-lg text-gray-800 group-hover:text-white">Mentor 一对一指引，深入探索技术领域，一起了解最新技术进展，学习顶尖论文，在实践中不断成长。<br/>进入核心团队，直接参与到具有挑战性的核心项目中，拥有更大成长空间，深入了解底层技术产品，并且能够看到行业及公司发展全局。</p>
+              <h4 className="text-2xl font-semibold text-blue-600 group-hover:text-white transition-all">专业成长</h4>
+              <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
+                <p>Mentor 一对一指引，深入探索技术领域，一起了解最新技术进展，学习顶尖论文，在实践中不断成长。</p>
+                <p>进入核心团队，直接参与到具有挑战性的核心项目中，拥有更大成长空间，深入了解底层技术产品，并且能够看到行业及公司发展全局。</p>
+              </div>  
           </li>
           <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-purple-600 transition-all">
-              <p className="text-2xl font-semibold text-purple-600 group-hover:text-white transition-all">工程师文化</p>
-              <p className="text-lg text-gray-800 group-hover:text-white">自我驱动，信息平等，追求高效和自动化，不害怕犯错，在一次次问题分析中变得更好。<br/>自由而灵活的工作氛围，为创新培育最适合的土壤。</p>
+              <h4 className="text-2xl font-semibold text-purple-600 group-hover:text-white transition-all">工程师文化</h4>
+              <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
+                <p>自我驱动，信息平等，追求高效和自动化，不害怕犯错，在一次次问题分析中变得更好。</p>
+                <p>自由而灵活的工作氛围，为创新培育最适合的土壤。</p>
+              </div>
           </li>
           <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-green-600 transition-all">
-              <p className="text-2xl font-semibold text-green-600 group-hover:text-white transition-all">扁平管理</p>
-              <p className="text-lg text-gray-800 group-hover:text-white">摒除大公司的冗杂人事，始终保持快速沟通的做事方式。弹性工作制，不打卡，以结果为导向，拒绝形式化的 996。</p>
+              <h4 className="text-2xl font-semibold text-green-600 group-hover:text-white transition-all">扁平管理</h4>
+              <div className="text-lg text-gray-800 group-hover:text-white space-y-4">摒除大公司的冗杂人事，始终保持快速沟通的做事方式。弹性工作制，不打卡，以结果为导向，拒绝形式化的 996。</div>
           </li>
           <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-red-600 transition-all">
-              <p className="text-2xl font-semibold text-red-600 group-hover:text-white transition-all">公司前景</p>
-              <p className="text-lg text-gray-800 group-hover:text-white">完全自主研发超融合及分布式存储产品，颠覆传统企业 IT 基础设施，定位千亿级企业云市场。<br/>专注做难的事，让我们有足够高的门槛，在竞争中保持独特优势。</p>
+              <h4 className="text-2xl font-semibold text-red-600 group-hover:text-white transition-all">公司前景</h4>
+              <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
+                <p>完全自主研发超融合及分布式存储产品，颠覆传统企业 IT 基础设施，定位千亿级企业云市场。</p>
+                <p>专注做难的事，让我们有足够高的门槛，在竞争中保持独特优势。</p>
+              </div>
           </li>
           <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-yellow-600 transition-all">
-              <p className="text-2xl font-semibold text-yellow-600 group-hover:text-white transition-all">价值实现</p>
-              <p className="text-lg text-gray-800 group-hover:text-white">为客户提供优质的 IT 基础设施，让他们专注于自己的领域，创造更多经济与社会价值。<br/>在核心系统领域深耕，构建自主知识产权护城河，打造国际上最领先的基础设施产品。</p>
+              <h4 className="text-2xl font-semibold text-yellow-600 group-hover:text-white transition-all">价值实现</h4>
+              <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
+                <p>为客户提供优质的 IT 基础设施，让他们专注于自己的领域，创造更多经济与社会价值。</p>
+                <p>在核心系统领域深耕，构建自主知识产权护城河，打造国际上最领先的基础设施产品。</p>
+              </div>
           </li>
           <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-indigo-900 transition-all">
-              <p className="text-2xl font-semibold text-indigo-900 group-hover:text-white transition-all">福利待遇</p>
-              <p className="text-lg text-gray-800 group-hover:text-white">极具市场竞争力待遇，表现优异者可获得期权激励。<br/>全额五险一金、餐补、商业医疗保险、团建基金…一切都为了给你带来实实在在的好处。</p>
+              <h4 className="text-2xl font-semibold text-indigo-900 group-hover:text-white transition-all">福利待遇</h4>
+              <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
+                <p>极具市场竞争力待遇，表现优异者可获得期权激励。</p>
+                <p>全额五险一金、餐补、商业医疗保险、团建基金…一切都为了给你带来实实在在的好处。</p>
+              </div>
           </li>
         </ul>
          {/* Why Content Ends */}
