@@ -4,7 +4,7 @@
 
 .heroSection {
     background-image: url('/hero_bg.png');
-    background-size: 80%;
+    background-size: 720px;
     background-repeat: repeat-x;
     max-height: 800px;
     background-position-x: center;
@@ -38,7 +38,7 @@
 }
 
 .jobCard {
-    @apply h-40 px-6 pt-6 shadow rounded-3xl;
+    @apply h-40 px-6 pt-6 shadow rounded-3xl cursor-pointer;
     transition: all .2s ease-in-out;
     transform: translateY(0);
     background-repeat: no-repeat;
@@ -89,7 +89,6 @@
     background-size: 96px 79px, 100% 100%;
 }
 
-
 .jobCard:hover {
     @apply shadow-lg;
     transform: translateY(-5px);
@@ -113,4 +112,17 @@
 
 .cardDeck li:nth-child(n+2) {
     
+}
+
+/* Modal */
+.modal {
+    transition: opacity 0.15s ease;
+}
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
+
+.modalFrame {
+    max-height: calc(100vh - 10rem);
 }

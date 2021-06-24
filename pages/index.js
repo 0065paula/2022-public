@@ -5,6 +5,11 @@ import Link from 'next/link'
 import Media from '../components/media'
 import Ref from '../components/reference'
 import Quote from '../components/quote'
+import JobModal from '../components/jobModal'
+
+import jobContents from '../static/jobContent'
+
+import React, { useState } from 'react'
 
 const cardInfo = [
   { 
@@ -39,12 +44,14 @@ const cardInfo = [
   }
 ]
 
-
 export default function Home() {
+  const [showModal, setShowModal] = useState(false)
+  const [modalTargetKey, setModalTargetKey] = useState('distributedMemory')
+
   return (
     <div className="bg-gray-100">
       {/* Top Nav Starts */}
-      <div className="fixed z-50 bg-gray-100 bg-opacity-60 w-screen backdrop-filter backdrop-blur-xl">
+      <div className="fixed z-20 bg-gray-100 bg-opacity-60 w-screen backdrop-filter backdrop-blur-xl">
         <div className="max-w-screen-xl flex items-center justify-between px-8 py-7 mx-auto">
             {/* SmartX Logo */}
             <Image
@@ -64,7 +71,7 @@ export default function Home() {
       {/* Hero Section Starts */}
       <section className="heroSection sm:h-screen w-screen pt-48 pb-16 sm:pb-0 px-4">
         {/* Heading Content Starts */}
-        <div className="relative flex flex-col space-y-10 items-center justify-center px-4 md:px-8 lg:px-16 py-6 md:py-10 lg:py-12 bg-white bg-opacity-60 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl backdrop-filter backdrop-blur-sm">
+        <div className="relative flex flex-col space-y-10 items-center justify-center px-4 md:px-8 lg:px-16 py-6 md:py-10 lg:py-12 bg-white bg-opacity-90 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl backdrop-filter backdrop-blur-sm">
           <div className="w-60 h-40">
               <Image
                 src="/hiring_logo.svg"
@@ -107,9 +114,9 @@ export default function Home() {
       {/* Pre Section Ends */}
 
       {/* Job Listing Section Starts */}
-      <section className="py-14 w-full max-w-screen-xl mx-auto space-y-16 px-8">
+      <section className="py-14 w-full max-w-screen-xl mx-auto px-8">
         {/* Title Area Starts */}
-        <div className="flex flex-col space-y-6 items-center justify-start mx-auto">
+        <div className="flex flex-col space-y-6 items-center justify-start mx-auto mb-16">
           <h4 className="text-xl font-medium text-center text-gray-700 text-opacity-60">校招岗位</h4>
           <h2 className="titleClipText block text-5xl font-bold text-center leading-normal">用真正有价值的工作<br/>激发你的潜能</h2>
         </div>
@@ -118,43 +125,20 @@ export default function Home() {
         {/* Job Listing Content Starts */}
 
         <div className="grid grid-cols-1 sm:grid-cols-6 gap-4 ">
-          {/* 分布式存储 */} 
-          <div className="jobCard sm:col-span-2 md:col-span-4">
-            <h3>分布式存储</h3>
-          </div>
-          {/* 虚拟化 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2">
-            <h3>虚拟化</h3>
-          </div>
-          {/* 软件定义网络 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2">
-            <h3>软件定义网络</h3>
-          </div>
-          {/* 分布式管理平台 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2">
-            <h3>分布式管理平台</h3>
-          </div>
-          {/* 云原生 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2">
-            <h3>云原生</h3>
-          </div>
-          {/* 测试 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2">
-            <h3>测试</h3>
-          </div>
-          {/* 前端 */}
-          <div className="jobCard sm:col-span-2 md:col-span-2">
-            <h3>前端</h3>
-          </div>
-          {/* 产品 */}
-          <div className="jobCard sm:col-span-2 md:col-span-1">
-            <h3>产品</h3>
-          </div>
-          {/* 设计 */}
-          <div className="jobCard sm:col-span-2 md:col-span-1">
-            <h3>设计</h3>
-          </div>
+          {
+            jobContents().map(job => {
+              return (
+                <div className={job.className} key={job.key} onClick={() => {
+                  setShowModal(true)
+                  setModalTargetKey(job.key)
+                }}>
+                  <h3>{job.title}</h3>
+                </div>
+              )
+            })
+          }
         </div>
+        {showModal ? <JobModal targetKey={modalTargetKey} setShowModal={setShowModal} /> : null}
         {/* Job Listing Content Starts */}
       </section>
       {/* Job Listing Section Ends */}
@@ -185,7 +169,7 @@ export default function Home() {
                 <p className="text-2xl font-medium text-gray-900">成立于</p>
                 <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">2013 年</p>
               </h2>           
-              <p className="text-gray-900">在初创公司中，我们很成熟。<br/>在 IT 基础架构领域，我们很年轻。</p>
+              <p className="text-gray-900">在初创公司中，我们很成熟。<br/>在 IT 基础架构领域，我们很年轻。<br/> 一路走来，不断取得新的成就。 </p>
             </div>     
           </div>
           {/* Heading Ends */}
@@ -193,9 +177,9 @@ export default function Home() {
           {/* About Page 1 Content Starts */}
           <div className="md:col-span-8">
             <ul className="cardDeck w-full relative">
-            {cardInfo.map(function(card) {
+            {cardInfo.map((card, index) => {
               return (
-                <li className="mt-8">
+                <li className="mt-8" key={index}>
                   <Media
                     link={card.link}
                     logo={card.logo}
@@ -246,7 +230,7 @@ export default function Home() {
                 <p className="text-2xl text-gray-900">服务</p>
                 <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">500+ 客户</p>
               </h2>           
-              <p className="text-gray-900">涉及国计民生方方面面，亦被多家海外客户信任。</p>
+              <p className="text-gray-900">涉及国计民生方方面面，亦被多家海外客户信任，承载企业经营的关键 IT 业务系统。</p>
             </div> 
           </div>
           {/* Heading Ends */}
