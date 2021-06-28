@@ -12,35 +12,55 @@ import jobContents from '../static/jobContent'
 import React, { useState } from 'react'
 
 const cardInfo = [
-  { 
-    link: "https://www.smartx.com/blog/2021/05/idc-2020-q4/",
-    logo: "/IDC.png",
-    title: "IDC 2020 Q4 报告：SmartX 超融合软件金融行业排名第一",
-    desc: "在金融行业，唯一专注在超融合赛道的中国厂商 SmartX 以 17.2% 的市场占有率排名第一，超越 华为、深信服、戴尔等国内外综合类 IT 厂商。"
+  { time: "2013 年 7 月",
+    title: "公司成立。",
+    link: "",
+    logo: "", 
   },
-  {
+  { time: "2013 年 9 月",
+    title: "获得联想创投天使投资。",
+    link: "",
+    logo: "/13_9.png", 
+  },
+  { time: "2015 年 3 月",
+    title: "推出分布式块存储 SmartX ZBS 1.0 正式版。",
+    link: "",
+    logo: "", 
+  },
+  { time: "2015 年 6 月",
+    title: "获得方广资本、高榕资本的 A 轮融资。",
+    link: "",
+    logo: "/15_6", 
+  },
+  { time: "2017 年 8 月",
+    title: "近亿元 B 轮融资，经纬创投领投，方广资本、高榕资本、联想创投跟投。",
+    link: "",
+    logo: "/17_8", 
+  },
+  { time: "2019 年 8 月",
+    title: "SmartX 成为中国唯一入选 2019 IDC 创新者的超融合厂商。",
+    link: "",
+    logo: "/19_8", 
+  },
+  { time: "2020 年 5 月",
+    title: "入选全球知名市场分析公司 Forrester 超融合市场报告。",
     link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
-    logo: "/Gartner.png",
-    title: "2020-2021 年度 Gartner Peer Insights 超融合软件市场报告：SmartX获评亚太区客户之选",
-    desc: "对全球范围内共计 12 家超融合厂商的用户评价进行分析，其中 SmartX 以 4.9 分（满分 5 分）的最高综合评分获评亚太区“客户之选”。"
+    logo: "/20_5", 
   },
-  { 
-    link: "https://www.smartx.com/blog/2020/11/36kr-top50/",
-    logo: "/36kr.png",
-    title: "SmartX 入选 36 氪中国新基建之王 TOP50 企业榜单",
-    desc: "SmartX 凭借超融合技术与产品优势以及在企业云赛道的广阔发展前景入选，并且是唯一入选超融合数据存储与虚拟化技术业务领域的厂商。"
+  { time: "2020 年 7 月",
+    title: "完成 2 亿元人民币 B+ 轮与 C 轮融资，B+ 轮融资由祥峰投资领投，三星创投跟投。C 轮融资由天创资本和华业天成资本领投，老股东方广资本继续增投。",
+    link: "",
+    logo: "/20_7", 
   },
-  {
-    link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
-    logo: "/Forrester.png",
-    title: "SmartX 入围 Forrester 全球超融合“Now Tech”报告，中国仅入围五家",
-    desc: "市场分析公司 Forrester 发布超融合行业报告，重点推荐 21 家全球范围内的超融合厂商，其中包括五家中国厂商：华为、SmartX、深信服等。"
-  },
-  {
+  { time: "2021 年 1 月",
+    title: "获 TechTarget 2020 年度超融合最佳产品奖，并且是唯一入选该奖项的中国厂商。",
     link: "https://www.smartx.com/blog/2021/01/smartx-techtarget-2020/",
-    logo: "/TechTarget.png",
-    title: "SmartX 超低延迟一体机获评国际权威 IT 媒体 TechTarget 2020 年度超融合最佳产品奖",
-    desc: "SmartX 2020 年发布的 P 系列超低延迟一体机获评超融合最佳产品奖，并且是唯一入选该奖项的中国厂商。"
+    logo: "/21_1", 
+  },
+  { time: "2021 年 5 月",
+    title: "SmartX 以最高综合评分获评 Gartner 亚太区“客户之选”。",
+    link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
+    logo: "/21_5", 
   }
 ]
 
@@ -71,7 +91,7 @@ export default function Home() {
       {/* Hero Section Starts */}
       <section className="heroSection sm:h-screen w-screen pt-48 pb-16 sm:pb-0 px-4">
         {/* Heading Content Starts */}
-        <div className="relative flex flex-col space-y-10 items-center justify-center px-4 md:px-8 lg:px-16 py-6 md:py-10 lg:py-12 bg-white bg-opacity-90 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl backdrop-filter backdrop-blur-sm">
+        <div className="relative flex flex-col space-y-10 items-center justify-center py-6 md:py-10 lg:py-12 bg-white bg-opacity-90 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl min-w-max backdrop-filter backdrop-blur-sm">
           <div className="w-60 h-40">
               <Image
                 src="/hiring_logo.svg"
@@ -81,7 +101,7 @@ export default function Home() {
               />
           </div>
           <div className="px-6 py-3">
-              <p className="text-3xl font-semibold text-center text-gray-900">一起打造 IT 世界的基础设施</p>
+              <p className="text-2xl sm:text-3xl font-semibold text-center text-gray-900">一起打造 IT 世界的基础设施</p>
           </div>
           {/* Preview Badge */}
           <div className="absolute hidden sm:block sm:-top-20 sm:-right-20 transform rotate-0 hover:-rotate-12 transition duration-50 ease-out">
@@ -97,17 +117,26 @@ export default function Home() {
       {/* Hero Section Ends */}
 
       {/* Pre Section Starts */}
-      <section className="py-14 w-full max-w-screen-xl mx-auto px-4 sm:px-8">
-        <div className="preBanner w-full sm:w-4/6 px-8 py-6 mx-auto rounded-2xl">
-          <p className="text-2xl sm:text-3xl font-semibold text-white mb-2">提前批，等你抢占先机。</p>
-          <p className="text-small text-white mb-6">7 月 1 日 ~ 7 月 31 日</p>
-          <ul className="text-base sm:text-lg text-white leading-relaxed list-disc list-inside mb-8">
-            <li>获得 SSP offer 几率高；</li>
-            <li>不影响正式批的投递，获得多一次尝试机会；</li>
-            <li>一周内完成面试流程，流程快效率高。</li>
+      <section className="py-14 w-full bg-gray-200">
+        <div className="w-full sm:w-4/6 px-8 py-6 mx-auto rounded-2xl text-center">
+          <p className="titleClipText titleClipTextPurpleYellow text-2xl sm:text-3xl font-semibold mb-2">提前批，等你抢占先机</p>
+          <p className="text-small text-gray-500 mb-8">7 月 1 日 ~ 7 月 31 日</p>
+          <ul className="flex flex-wrap sm:flex-nowrap mb-12 space-y-12 sm:space-y-0">
+            <li className="w-full sm:w-1/3 flex flex-col items-center">
+              <img src="SSP.svg" width={72} />
+              <h5 className="w-full mt-4 text-lg font-medium">获得 SSP offer 几率高</h5>
+            </li>
+            <li className="w-full sm:w-1/3 flex flex-col items-center">
+              <img src="Chance.svg" width={72} />
+              <h5 className="w-full mt-4 text-lg font-medium">不影响正式批的投递，获得多一次尝试机会</h5>
+            </li>
+            <li className="w-full sm:w-1/3 flex flex-col items-center">
+              <img src="Speed.svg" width={72} />
+              <h5 className="w-full mt-4 text-lg font-medium">一周内完成面试流程，流程快效率高</h5>
+            </li>
           </ul>
           <Link href="https://app.mokahr.com/campus_apply/smartx/4183#/jobs">
-            <a className="block w-52 py-1 border-2 rounded-full border-white text-lg text-center text-white mx-auto hover:border-blue-500 hover:bg-blue-500" target="_blank">全部校园招聘职位 ↗</a>
+            <a className="block w-52 py-1 border-2 rounded-full border-blue-500 text-lg text-center text-blue-500 mx-auto hover:border-blue-500 hover:bg-blue-500" target="_blank">全部校园招聘职位 ↗</a>
           </Link> 
         </div>
       </section>
@@ -116,9 +145,9 @@ export default function Home() {
       {/* Job Listing Section Starts */}
       <section className="py-14 w-full max-w-screen-xl mx-auto px-8">
         {/* Title Area Starts */}
-        <div className="flex flex-col space-y-6 items-center justify-start mx-auto mb-16">
+        <div className="flex flex-col space-y-2 sm:space-y-6 items-center justify-start mx-auto mb-16">
           <h4 className="text-xl font-medium text-center text-gray-700 text-opacity-60">校招岗位</h4>
-          <h2 className="titleClipText block text-5xl font-bold text-center leading-normal">用真正有价值的工作<br/>激发你的潜能</h2>
+          <h2 className="titleClipTextGreenPurple titleClipText block text-3xl sm:text-5xl font-bold text-center space-y-2"><p>用真正有价值的工作</p><p>激发你的潜能</p></h2>
         </div>
         {/* Title Area Ends */}
 
@@ -144,11 +173,11 @@ export default function Home() {
       {/* Job Listing Section Ends */}
 
       {/* About Section Starts */}
-      <section className="py-14 w-full max-w-screen-xl mx-auto space-y-24 px-8">
+      <section className="py-14 w-full max-w-screen-xl mx-auto space-y-12 sm:space-y-24 px-8">
         {/* Title Area Starts */}
-        <div className="flex flex-col space-y-6 items-center justify-start mx-auto">
+        <div className="flex flex-col space-y-2 sm:space-y-6 items-center justify-start mx-auto">
           <h4 className="text-xl font-medium text-center text-gray-700 text-opacity-60">了解 SmartX</h4>
-          <h2 className="titleClipText block text-5xl font-bold text-center leading-normal">为企业提供稳定、高性能、易用的 IT 基础架构</h2>
+          <h2 className="titleClipText titleClipTextOrangeBlue block text-3xl sm:text-5xl font-bold text-center space-y-2">为企业提供稳定、高性能、易用的 IT 基础架构</h2>
         </div>
         {/* Title Area Ends */}
 
@@ -161,22 +190,39 @@ export default function Home() {
         {/* Vision Ends */}
 
         {/* About Page 1 Starts */}
-        <div className="aboutPage">
-          {/* Heading Starts */}
-          <div className="md:col-start-2 md:col-span-3">
-            <div className="sticky top-64 space-y-4">
-              <h2 className="space-y-2">
-                <p className="text-2xl font-medium text-gray-900">成立于</p>
-                <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">2013 年</p>
-              </h2>           
-              <p className="text-gray-900">在初创公司中，我们很成熟。<br/>在 IT 基础架构领域，我们很年轻。<br/> 一路走来，不断取得新的成就。 </p>
-            </div>     
+        <div className="w-full grid grid-cols-1 sm:grid-cols-12 sm:gap-4">
+          {/* Timeline Area Starts */}          
+          {/* Timeline Title */}
+          <div className="space-y-4 sm:space-y-8 col-span-1 sm:col-span-12 md:col-span-8 md:col-start-3 mb-12">
+            <h4 className="textClipGradientBlue text-2xl sm:text-4xl font-semibold text-center">发展历程</h4>
+            <p className="text-md sm:text-xl font-normal text-center text-gray-800 px-12">成立 8 年。在初创公司中，我们很成熟。在 IT 基础架构领域，我们很年轻。一路走来，不断取得新成就。</p>
           </div>
-          {/* Heading Ends */}
-
-          {/* About Page 1 Content Starts */}
-          <div className="md:col-span-8">
-            <ul className="cardDeck w-full relative">
+          {/* Axis */}
+          <div className="col-span-1 sm:col-span-2 sm:col-start-2">
+            <ul className="timelineAxis sticky top-48 grid grid-cols-3 sm:block">
+              <li className="active">
+                2013
+              </li>
+              <li>
+                2015
+              </li>
+              <li>
+                2017
+              </li>
+              <li>
+                2019
+              </li>
+              <li>
+                2020
+              </li>
+              <li>
+                2021
+              </li>
+            </ul>
+          </div>
+          
+          {/* Cards */}
+          <ul className="col-span-1 sm:col-span-6 sm:col-start-5 md:col-span-5 md:col-start-5">
             {cardInfo.map((card, index) => {
               return (
                 <li className="mt-8" key={index}>
@@ -184,77 +230,46 @@ export default function Home() {
                     link={card.link}
                     logo={card.logo}
                     title={card.title}
-                    desc={card.desc}
+                    time={card.time}
                   />
                 </li>
               );
             })}
-            </ul>
-          </div>
-          {/* About Page 1 Content Ends */}
+            </ul>    
         </div>
-        {/* About Page 1 Ends */}
+        {/* About Page 1 Content Ends */}
+      {/* About Page 1 Ends */}
 
-        {/* About Page 2 Starts */}
-        <div className="aboutPage">
-          {/* Heading Starts */}
-          <div className="md:col-start-2 md:col-span-3">
-            <div className="sticky top-64 space-y-4">
-              <h2 className="space-y-2">
-                <p className="text-2xl text-gray-900">共获得</p>
-                <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">5 轮融资</p>
-              </h2>           
-              <p className="text-gray-900">投资方包括：方广资本、高榕资本、经纬中国等。</p>
-            </div> 
-          </div>
-          {/* Heading Ends */}
-          {/* About Page 2 Content Starts */}
-          <div className="mt-8 md:28 grid grid-cols-3 md:col-span-8 gap-4 auto-rows-min">
-            <img className="col-span-1 mx-auto" src="VC_1.png" width={168} height={90} />
-            <img className="col-span-1 mx-auto" src="VC_2.png" width={168} height={90} />
-            <img className="col-span-1 mx-auto" src="VC_3.png" width={168} height={90} />
-            <img className="col-span-1 mx-auto" src="VC_4.png" width={168} height={90} />
-            <img className="col-span-1 mx-auto" src="VC_5.png" width={168} height={90} />
-            <img className="col-span-1 mx-auto" src="VC_6.png" width={168} height={90} />
-          </div>
-          {/* About Page 2 Content Ends */}
-        </div>
-        {/* About Page 2 Ends */}
 
-        {/* About Page 3 Starts */}
-        <div className="aboutPage">
+        {/* About Page  Starts */}
+        <div className="">
           {/* Heading Starts */}
-          <div className="md:col-start-2 md:col-span-3">
-            <div className="sticky top-64 space-y-4">
-              <h2 className="space-y-2">
-                <p className="text-2xl text-gray-900">服务</p>
-                <p className="text-5xl md:text-4xl lg:text-5xl font-bold text-blue-600">500+ 客户</p>
-              </h2>           
-              <p className="text-gray-900">涉及国计民生方方面面，亦被多家海外客户信任，承载企业经营的关键 IT 业务系统。</p>
-            </div> 
+          <div className="space-y-4 sm:space-y-8 col-span-1 sm:col-span-8 sm:col-start-3">
+            <h4 className="textClipGradientBlue text-2xl sm:text-4xl font-semibold text-center">服务 500+ 客户</h4>
+            <div className="text-md sm:text-xl font-normal text-center text-gray-800 px-12">涉及国计民生方方面面，亦被多家海外客户信任。承载企业经营的关键 IT 业务系统。</div>
           </div>
           {/* Heading Ends */}
           {/* About Page 3 Content Starts */}
-          <div className="mt-8 md:mt-28 grid grid-cols-4 md:col-span-8 gap-4 auto-rows-min">
-            <img className="col-span-1 mx-auto" src="Case_01.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_02.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_03.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_04.png" width={120} height={60} />
+          <div className="mt-16 grid grid-cols-4 sm:col-span-10 sm:col-start-2 gap-2">
+            <img className="col-span-1 mx-auto" src="Case_01.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_02.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_03.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_04.png" width={200} height={100} />
 
-            <img className="col-span-1 mx-auto" src="Case_05.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_06.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_07.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_08.png" width={120} height={60} />
+            <img className="col-span-1 mx-auto" src="Case_05.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_06.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_07.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_08.png" width={200} height={100} />
 
-            <img className="col-span-1 mx-auto" src="Case_09.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_10.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_11.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_12.png" width={120} height={60} />
+            <img className="col-span-1 mx-auto" src="Case_09.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_10.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_11.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_12.png" width={200} height={100} />
 
-            <img className="col-span-1 mx-auto" src="Case_13.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_14.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_15.png" width={120} height={60} />
-            <img className="col-span-1 mx-auto" src="Case_16.png" width={120} height={60} />
+            <img className="col-span-1 mx-auto" src="Case_13.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_14.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_15.png" width={200} height={100} />
+            <img className="col-span-1 mx-auto" src="Case_16.png" width={200} height={100} />
           </div>
           {/* About Page 3 Content Ends */}
         </div>
@@ -265,9 +280,9 @@ export default function Home() {
       {/* How Section Starts */}
       <section className="py-14 w-full max-w-screen-xl mx-auto space-y-16 px-8">
         {/* Title Area Starts */}
-        <div className="flex flex-col space-y-6 items-center justify-start mx-auto">
+        <div className="flex flex-col space-y-2 sm:space-y-6 items-center justify-start mx-auto">
           <h4 className="text-xl font-medium text-center text-gray-700 text-opacity-60">在 SmartX，我们这样工作</h4>
-          <h2 className="titleClipText block text-4xl sm:text-5xl font-bold text-center leading-normal">在适合你的土壤<br/>获得更快的成长</h2>
+          <h2 className="titleClipText titleClipTextGreenOrange block text-4xl sm:text-5xl font-bold text-center space-y-2"><p>在适合你的土壤</p><p>获得更快的成长</p></h2>
         </div>
         {/* Title Area Ends */}
 
@@ -275,8 +290,8 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 space-y-12">
           <div className="space-y-8 col-span-1 sm:col-span-6 sm:col-start-4">
-            <p className="text-3xl sm:text-4xl font-semibold text-gray-900">深入细节，不向未知妥协</p>
-            <p className="text-xl text-gray-900">从原理和本质上去分析问题并解决。刨根问底，从表面问题挖决出背后的原因。做好执行的每个细节。</p>
+            <p className="text-2xl sm:text-4xl font-semibold text-gray-900">深入细节，不向未知妥协</p>
+            <p className="text-lg sm:text-xl text-gray-900">从原理和本质上去分析问题并解决。刨根问底，从表面问题挖决出背后的原因。做好执行的每个细节。</p>
             <div className="flex flex-col space-y-2">
               <p className="text-justify text-gray-900 text-opacity-60">阅读知乎专栏文章，了解我们如何在遇到问题时，进行抽丝剥茧的分析：</p>
               <Ref 
@@ -292,24 +307,24 @@ export default function Home() {
             </div>
         </div>
         <div className="space-y-8 sm:col-span-6 sm:col-start-4">
-            <p className="text-3xl col-span-1 sm:text-4xl font-semibold text-gray-900">自主，自驱</p>
-            <p className="text-xl text-gray-900">不以工作时长来衡量成果，不以规章、流程、会议来约束创造力，而是以成长作为自身的最强驱动力。让每一个员工有足够的空间主动创造价值。</p>
+            <p className="text-2xl sm:text-4xl font-semibold text-gray-900">自主，自驱</p>
+            <p className="text-lg sm:text-xl text-gray-900">不以工作时长来衡量成果，不以规章、流程、会议来约束创造力，而是以成长作为自身的最强驱动力。让每一个员工有足够的空间主动创造价值。</p>
         </div>
       </div>
         {/* Quotes */}
-        <h3 className="text-3xl font-semibold text-center text-blue-600">听听 SmartX 人怎么说</h3>
+        <h3 className="text-2xl sm:text-3xl font-semibold text-center text-blue-600">听听 SmartX 人怎么说</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
           <Quote 
             content1="对我来说，SmartX 是一家很特别的公司，这里的人有足够的实力和耐心，做许多很难的事情。选择深耕基础架构领域的创业公司很少，SmartX 难得可贵地在这一领域立足，做最有挑战性的工作。"
             content2="在这里工作了半年时间，我很喜欢这种不断学习，不断挑战，不断突破的工作方式，对个人的技术成长的帮助也非常大。"
             name="俞同学"
-            title="分布式存储 · 2021 年秋招加入"
+            title="后端开发工程师 · 2021 年秋招加入"
           />
           <Quote 
             content1="SmartX 能充分考虑个人意愿，让每个人做自己感兴趣的事情。在这里，我能够专注于自己非常喜欢的项目，开发非常有新意的产品。"
             content2="公司灵活自由的工作时间，让我不需要担心通勤打卡方面的问题；宽松的工作氛围，能让我保持较高的工作效率。"
             name="冯同学"
-            title="前端实习生 · 2020 年加入"
+            title="前端开发实习生 · 2020 年加入"
           />
           <Quote 
             content1="一周时间就完成了从测评、面试、沟通到入职。公司的工作氛围非常好，能感受到大家是想认真地把东西做好，工作起来非常舒畅。"
@@ -321,7 +336,7 @@ export default function Home() {
             content1="SmartX 对新成员非常友好。新入职的第一个月，mentor 每天都会安排时间进行答疑；公司内部文档丰富，新人能够快速建立起对工作内容的认知。"
             content2="公司鼓励探究并不断突破自我。入职即可参与核心项目的研发。我们不以完成任务为终点，而是在此基础上追求极致的性能与最佳的用户体验，最终目标是实现产品提升和自身能力的飞跃。"
             name="张同学"
-            title="分布式存储 · 2020 年秋招加入"
+            title="后端开发工程师 · 2020 年秋招加入"
           />
         </div>
       </section>
@@ -330,15 +345,15 @@ export default function Home() {
       {/* Why Section Starts */}
       <section className="py-14 w-full max-w-screen-xl mx-auto space-y-16 px-8">
         {/* Title Area Starts */}
-        <div className="flex flex-col space-y-6 items-center justify-start mx-auto">
+        <div className="flex flex-col space-y-2 sm:space-y-6 items-center justify-start mx-auto">
           <h4 className="text-xl font-medium text-center text-gray-700 text-opacity-60">选择 SmartX 的理由</h4>
-          <h2 className="titleClipText block text-3xl sm:text-5xl font-bold text-center leading-noraml"><p>目标远大，脚踏实地</p><p>有挑战，有收获</p></h2>
+          <h2 className="titleClipText titleClipTextBlueGreen block text-3xl sm:text-5xl font-bold text-center space-y-2"><p>目标远大，脚踏实地</p><p>有挑战，有收获</p></h2>
         </div>
         {/* Title Area Ends */}
 
         {/* Why Content Starts */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
-          <li className="space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-blue-600 transition-all">
+          <li className="space-y-4 sm:space-y-6 px-6 pt-5 pb-8 rounded-xl group hover:bg-blue-600 transition-all">
               <h4 className="text-2xl font-semibold text-blue-600 group-hover:text-white transition-all">专业成长</h4>
               <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
                 <p>Mentor 一对一指引，深入探索技术领域，一起了解最新技术进展，学习顶尖论文，在实践中不断成长。</p>
@@ -374,7 +389,7 @@ export default function Home() {
               <h4 className="text-2xl font-semibold text-indigo-900 group-hover:text-white transition-all">福利待遇</h4>
               <div className="text-lg text-gray-800 group-hover:text-white space-y-4">
                 <p>极具市场竞争力待遇，表现优异者可获得期权激励。</p>
-                <p>全额五险一金、餐补、商业医疗保险、团建基金…一切都为了给你带来实实在在的好处。</p>
+                <p>全额五险一金、餐补、商业医疗保险、12 天带薪年假、MacBook Pro 笔记本、团建基金、零食饮料…一切都为了给你带来实实在在的好处。</p>
               </div>
           </li>
         </ul>
@@ -386,8 +401,8 @@ export default function Home() {
       <section className="w-screen bg-white">
         <div className="py-14 w-full max-w-screen-xl mx-auto space-y-16 px-8">
           {/* Title Area Starts */}
-          <div className="flex flex-col space-y-6 items-center justify-start mx-auto">
-            <h2 className="titleClipText block text-5xl font-bold text-center">加入 SmartX</h2>
+          <div className="flex flex-col space-y-2 sm:space-y-6 items-center justify-start mx-auto">
+            <h2 className="titleClipText titleClipTextRedGreen block text-3xl sm:text-5xl font-bold text-center">加入 SmartX</h2>
           </div>
           {/* Title Area Ends */}
 
@@ -427,7 +442,7 @@ export default function Home() {
       {/* Contact Section Starts */}
       <section className="py-14 w-full max-w-screen-xl mx-auto space-y-16 px-8">
         {/* Title Area Starts */}
-        <div className="space-y-6 mx-auto">
+        <div className="space-y-2 sm:space-y-6 mx-auto">
           <h3 className="text-3xl font-semibold text-center text-gray-700 text-opacity-60">联系我们</h3>
         </div>
         {/* Contact Content Starts */}
