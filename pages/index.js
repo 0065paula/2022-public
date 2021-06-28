@@ -102,7 +102,7 @@ export default function Home() {
           <p className="text-2xl sm:text-3xl font-semibold text-white mb-2">提前批，等你抢占先机。</p>
           <p className="text-small text-white mb-6">7 月 1 日 ~ 7 月 31 日</p>
           <ul className="text-base sm:text-lg text-white leading-relaxed list-disc list-inside mb-8">
-            <li>提前锁定年薪 30 万以上 offer ，获得 SSP offer 几率高；</li>
+            <li>获得 SSP offer 几率高；</li>
             <li>不影响正式批的投递，获得多一次尝试机会；</li>
             <li>一周内完成面试流程，流程快效率高。</li>
           </ul>

@@ -4,8 +4,11 @@ import Link from 'next/link'
 import jobContents from '../static/jobContent'
 import Ref from './reference'
 
+import { isMobile } from '../utils/index'
+
 export default function JobModal(props) {
   const [selected, setSelected] = useState('');
+  const [maxHeight] = useState(isMobile() ? 2000 : 700);
 
   const job = jobContents().find(v => v.key === props.targetKey)
   const handleSelect = (index) => {
@@ -101,9 +104,9 @@ export default function JobModal(props) {
                       </div>
 
                       <div
-                        className="relative overflow-hidden transition-all max-h-0 duration-700 px-8"
+                        className={`relative overflow-hidden transition-all max-h-0 duration-700 px-8`}
                         style={{
-                          maxHeight: `${selected.match(index) ? 700 : 0}px`
+                          maxHeight: `${selected.match(index) ? maxHeight : 0}px`
                         }}
                       >
                         <div className="text-md font-bold text-blue-500 mb-2">岗位职责</div>
