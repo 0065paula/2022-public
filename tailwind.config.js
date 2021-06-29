@@ -22,8 +22,22 @@ module.exports = {
         200: "#EDF0F7",
         100: "#F2F5FA",
         50: "#F3F4F7",
-      }
-
+      },
+      purple: {
+        600: "#7E41FF",
+      },
+      green: {
+        600: "#00BA5D",
+      },
+      red: {
+        600: "#F0483E",
+      },
+      yellow: {
+        600: "#FEA008",
+      },
+      indigo: {
+        900: "#1D326C",
+      },
     }
   },
   variants: {
