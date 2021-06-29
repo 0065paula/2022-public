@@ -146,7 +146,7 @@
 }
 
 .timelineAxis li {
-    @apply text-2xl text-right text-gray-700 text-opacity-60 cursor-pointer hover:text-blue-600;
+    @apply hidden sm:block sm:text-2xl text-center sm:text-right text-gray-700 text-opacity-60 cursor-pointer hover:text-blue-600;
     height: 80px;
     position: relative;
 }
@@ -169,6 +169,16 @@
     background-color: #A3B4CC;
     box-sizing: border-box;
 }
+
+/* @media (max-width: 640px) {
+    .timelineAxis li:before {
+        display: none;
+    }
+
+    .timelineAxis li:after {
+        display: none;
+    }
+} */
 
 .timelineAxis li:before {
     content: "";
@@ -202,13 +212,46 @@
     border: none;
 }
 
+/* media */
+
 .mediaCard {
     background-position: top 16px right 16px;
     background-size: 48px auto;
-    background-image: url('/19_8.png');
     background-repeat: no-repeat;
     opacity: 0.6;
     transition: opacity .2s ease-out;
+}
+
+.bg_13_9 {
+    background-image: url('/13_9.png');
+}
+
+.bg_15_6 {
+    background-image: url('/15_6.png');
+}
+
+.bg_17_8 {
+    background-image: url('/17_8.png');
+}
+
+.bg_19_8 {
+    background-image: url('/19_8.png');
+}
+
+.bg_20_5 {
+    background-image: url('/20_5.png');
+}
+
+.bg_20_7 {
+    background-image: url('/20_7.png');
+}
+
+.bg_21_1 {
+    background-image: url('/21_1.png');
+}
+
+.bg_21_5 {
+    background-image: url('/21_5.png');
 }
 
 .active .mediaCard {
@@ -234,4 +277,8 @@ body.modal-active {
 
 .modalFrame {
     max-height: calc(100vh - 10rem);
+}
+
+.scrollSmooth {
+    scroll-behavior: smooth;
 }

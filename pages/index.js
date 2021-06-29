@@ -6,84 +6,51 @@ import Media from '../components/media'
 import Ref from '../components/reference'
 import Quote from '../components/quote'
 import JobModal from '../components/jobModal'
+import Timeline from '../components/timeLine'
 
 import jobContents from '../static/jobContent'
 
-import React, { useState } from 'react'
+import { isMobile } from '../utils/index'
 
-const cardInfo = [
-  { time: "2013 年 7 月",
-    title: "公司成立。",
-    link: "",
-    logo: "", 
-  },
-  { time: "2013 年 9 月",
-    title: "获得联想创投天使投资。",
-    link: "",
-    logo: "/13_9.png", 
-  },
-  { time: "2015 年 3 月",
-    title: "推出分布式块存储 SmartX ZBS 1.0 正式版。",
-    link: "",
-    logo: "", 
-  },
-  { time: "2015 年 6 月",
-    title: "获得方广资本、高榕资本的 A 轮融资。",
-    link: "",
-    logo: "/15_6", 
-  },
-  { time: "2017 年 8 月",
-    title: "近亿元 B 轮融资，经纬创投领投，方广资本、高榕资本、联想创投跟投。",
-    link: "",
-    logo: "/17_8", 
-  },
-  { time: "2019 年 8 月",
-    title: "SmartX 成为中国唯一入选 2019 IDC 创新者的超融合厂商。",
-    link: "",
-    logo: "/19_8", 
-  },
-  { time: "2020 年 5 月",
-    title: "入选全球知名市场分析公司 Forrester 超融合市场报告。",
-    link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
-    logo: "/20_5", 
-  },
-  { time: "2020 年 7 月",
-    title: "完成 2 亿元人民币 B+ 轮与 C 轮融资，B+ 轮融资由祥峰投资领投，三星创投跟投。C 轮融资由天创资本和华业天成资本领投，老股东方广资本继续增投。",
-    link: "",
-    logo: "/20_7", 
-  },
-  { time: "2021 年 1 月",
-    title: "获 TechTarget 2020 年度超融合最佳产品奖，并且是唯一入选该奖项的中国厂商。",
-    link: "https://www.smartx.com/blog/2021/01/smartx-techtarget-2020/",
-    logo: "/21_1", 
-  },
-  { time: "2021 年 5 月",
-    title: "SmartX 以最高综合评分获评 Gartner 亚太区“客户之选”。",
-    link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
-    logo: "/21_5", 
-  }
-]
+import React, { useState, useEffect } from 'react'
 
 export default function Home() {
+  const [mobile, setMobile] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [modalTargetKey, setModalTargetKey] = useState('distributedMemory')
 
+  useEffect(() => {
+    setMobile(!!isMobile())
+  }, [])
+
   return (
-    <div className="bg-gray-100">
+    <div id="top" className="bg-gray-100 overflow-x-hidden">
       {/* Top Nav Starts */}
       <div className="fixed z-20 bg-gray-100 bg-opacity-60 w-screen backdrop-filter backdrop-blur-xl">
-        <div className="max-w-screen-xl flex items-center justify-between px-8 py-7 mx-auto">
+        <div className="max-w-screen-xl flex items-center justify-between px-4 py-2 sm:px-8 sm:py-7 mx-auto">
             {/* SmartX Logo */}
-            <Image
-              src="/smartx-logo-horizontal.svg"
-              alt="SmartX Logo"
-              width={140}
-              height={32}
-            />
+            <Link href="#top">
+              <img
+                src="/smartx-logo-horizontal.svg"
+                alt="SmartX Logo"
+                width={140}
+                height={32}
+                className="cursor-pointer"
+              />            
+            </Link>
+            
             {/* Link to Moka */}
-            <Link href="https://app.mokahr.com/campus_apply/smartx/4183">
-              <a className="text-sm md:text-base font-medium leading-7 text-right text-gray-900 hover:text-blue-500" target="_blank">全部校园招聘职位 ↗</a>
-            </Link>        
+            <div className="flex flex-col sm:flex-row sm:space-x-6">
+              <Link href="https://app.mokahr.com/campus_apply/smartx/4183">
+                <a className="text-sm md:text-base font-medium leading-7 text-right text-gray-900 hover:text-blue-500" target="_blank">全部校园招聘职位 ↗</a>
+              </Link>
+              <Link href="https://app.mokahr.com/m/candidate/applications/deliver-query/smartx">
+                <a className="text-sm md:text-base leading-7 text-right text-gray-500 hover:text-blue-500" target="_blank">查询招聘进展</a>
+              </Link>  
+              <Link href="#assist">
+                <a className="scrollSmooth text-sm md:text-base leading-7 text-right text-gray-500 hover:text-blue-500 ">添加招聘小助手</a>
+              </Link>              
+            </div>                   
         </div>       
       </div>
       {/* Top Nav Ends */}
@@ -93,7 +60,7 @@ export default function Home() {
         {/* Heading Content Starts */}
         <div className="relative flex flex-col space-y-10 items-center justify-center py-6 md:py-10 lg:py-12 bg-white bg-opacity-90 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl min-w-max backdrop-filter backdrop-blur-sm">
           <div className="w-60 h-40">
-              <Image
+              <img
                 src="/hiring_logo.svg"
                 alt="2021 SmartX 校园招聘"
                 width={240}
@@ -124,15 +91,15 @@ export default function Home() {
           <ul className="flex flex-wrap sm:flex-nowrap mb-12 space-y-12 sm:space-y-0 sm:space-x-4">
             <li className="w-full sm:w-1/3 flex flex-col items-center">
               <img src="SSP.svg" width={72} />
-              <h5 className="w-full mt-4 text-lg font-medium">获得 SSP offer 几率高</h5>
+              <h5 className="w-full mt-4 text-md sm:text-lg font-medium">获得 SSP offer 几率高</h5>
             </li>
             <li className="w-full sm:w-1/3 flex flex-col items-center">
               <img src="Chance.svg" width={72} />
-              <h5 className="w-full mt-4 text-lg font-medium">不影响正式批的投递，获得多一次尝试机会</h5>
+              <h5 className="w-full mt-4 text-md sm:text-lg font-medium">不影响正式批的投递，获得多一次尝试机会</h5>
             </li>
             <li className="w-full sm:w-1/3 flex flex-col items-center">
               <img src="Speed.svg" width={72} />
-              <h5 className="w-full mt-4 text-lg font-medium">一周内完成面试流程，流程快效率高</h5>
+              <h5 className="w-full mt-4 text-md sm:text-lg font-medium">一周内完成面试流程，流程快效率高</h5>
             </li>
           </ul>
           <Link href="https://app.mokahr.com/campus_apply/smartx/4183">
@@ -191,51 +158,7 @@ export default function Home() {
 
         {/* About Page 1 Starts */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-12 sm:gap-4">
-          {/* Timeline Area Starts */}          
-          {/* Timeline Title */}
-          <div className="space-y-4 sm:space-y-8 col-span-1 sm:col-span-12 md:col-span-8 md:col-start-3 mb-12">
-            <h4 className="textClipGradientBlue text-2xl sm:text-4xl font-semibold text-center">发展历程</h4>
-            <p className="text-md sm:text-xl font-normal text-center text-gray-800 px-12">成立 8 年。在初创公司中，我们很成熟。在 IT 基础架构领域，我们很年轻。一路走来，不断取得新成就。</p>
-          </div>
-          {/* Axis */}
-          <div className="col-span-1 sm:col-span-2 sm:col-start-2">
-            <ul className="timelineAxis sticky top-48 grid grid-cols-3 sm:block">
-              <li className="active">
-                2013
-              </li>
-              <li>
-                2015
-              </li>
-              <li>
-                2017
-              </li>
-              <li>
-                2019
-              </li>
-              <li>
-                2020
-              </li>
-              <li>
-                2021
-              </li>
-            </ul>
-          </div>
-          
-          {/* Cards */}
-          <ul className="col-span-1 sm:col-span-6 sm:col-start-5 md:col-span-5 md:col-start-5">
-            {cardInfo.map((card, index) => {
-              return (
-                <li className="mt-8" key={index}>
-                  <Media
-                    link={card.link}
-                    logo={card.logo}
-                    title={card.title}
-                    time={card.time}
-                  />
-                </li>
-              );
-            })}
-            </ul>    
+          <Timeline mobile={mobile}></Timeline>
         </div>
         {/* About Page 1 Content Ends */}
       {/* About Page 1 Ends */}
@@ -430,7 +353,7 @@ export default function Home() {
               </Link>
               <div className="text-sm text-center text-gray-700 text-opacity-60 mt-2">
                 已经投递？
-                <Link href="https://app.mokahr.com/login"><a className="hover:text-blue-600" target="_blank">查看状态</a></Link>
+                <Link href="https://app.mokahr.com/m/candidate/applications/deliver-query/smartx"><a className="hover:text-blue-600" target="_blank">查看状态</a></Link>
               </div>
             </div>
           </div>
@@ -443,7 +366,7 @@ export default function Home() {
       <section className="py-14 w-full max-w-screen-xl mx-auto space-y-16 px-8">
         {/* Title Area Starts */}
         <div className="space-y-2 sm:space-y-6 mx-auto">
-          <h3 className="text-3xl font-semibold text-center text-gray-700 text-opacity-60">联系我们</h3>
+          <h3 id="assist" className="text-3xl font-semibold text-center text-gray-700 text-opacity-60">联系我们</h3>
         </div>
         {/* Contact Content Starts */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">

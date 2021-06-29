@@ -8,7 +8,7 @@ import { isMobile } from '../utils/index'
 
 export default function JobModal(props) {
   const [selected, setSelected] = useState('');
-  const [maxHeight] = useState(isMobile() ? 2000 : 700);
+  const [maxHeight] = useState(2000);
 
   const job = jobContents().find(v => v.key === props.targetKey)
   const handleSelect = (index) => {

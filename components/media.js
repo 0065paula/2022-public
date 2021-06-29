@@ -4,10 +4,9 @@ import React from "react";
 export default function Media( props ) {
   return (    
         <div 
-          className="mediaCard flex w-full px-4 py-4 bg-white shadow rounded-lg mx-auto hover:shadow-xl transform hover:-translate-y-1 transition-transform"
-          style={{
-            // backgroundImage: `url({props.logo})`
-          }}
+          className={`
+            mediaCard flex w-full px-4 py-4 bg-white shadow rounded-lg mx-auto hover:shadow-xl transform hover:-translate-y-1 transition-transform
+            ${props.logo}`}
         >
           <div className="mediaText">
             <p className="text-sm text-gray-400 mb-1">{props.time}</p>
