@@ -2,7 +2,7 @@ export default function jobContents() {
   return [
     // 分布式存储
     {
-      className: 'jobCard sm:col-span-2 md:col-span-4 bg-gradient-to-b from-purple-200 to-purple-100',
+      className: 'jobCard sm:col-span-2 md:col-span-4',
       key: 'distributedMemory',
       title: '分布式存储',
       describe: [
@@ -54,7 +54,7 @@ export default function jobContents() {
     },
     // 虚拟化
     {
-      className: 'jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-green-400 to-green-200',
+      className: 'jobCard sm:col-span-2 md:col-span-2',
       key: 'virtualization',
       title: '虚拟化平台',
       describe: [
@@ -103,7 +103,7 @@ export default function jobContents() {
     },
     // 软件定义网络
     {
-      className: 'jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-blue-400 to-green-100',
+      className: 'jobCard sm:col-span-2 md:col-span-2',
       key: 'SDN',
       title: '软件定义网络',
       describe: [
@@ -143,7 +143,7 @@ export default function jobContents() {
     },
     // 分布式管理平台
     {
-      className: 'jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-yellow-200 to-yellow-100',
+      className: 'jobCard sm:col-span-2 md:col-span-2',
       key: 'SRE',
       title: '分布式管理平台',
       describe: [
@@ -183,7 +183,7 @@ export default function jobContents() {
     },
     // 云原生
     {
-      className: 'jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-blue-300 to-blue-200',
+      className: 'jobCard sm:col-span-2 md:col-span-2',
       key: 'cloudNative',
       title: '云原生',
       describe: [
@@ -221,7 +221,7 @@ export default function jobContents() {
     },
     // 测试
     {
-      className: 'jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-yellow-400 to-yellow-200',
+      className: 'jobCard sm:col-span-2 md:col-span-2',
       key: 'measurement',
       title: '测试',
       describe: [
@@ -290,7 +290,7 @@ export default function jobContents() {
     },
     // 前端
     {
-      className: 'jobCard sm:col-span-2 md:col-span-2 bg-gradient-to-b from-indigo-300 to-indigo-200',
+      className: 'jobCard sm:col-span-2 md:col-span-2',
       key: 'fe',
       title: '前端',
       describe: [
@@ -342,7 +342,7 @@ export default function jobContents() {
     },
     // 产品
     {
-      className: 'jobCard sm:col-span-2 md:col-span-1 bg-gradient-to-b from-gray-400 to-gray-300',
+      className: 'jobCard sm:col-span-2 md:col-span-1',
       key: 'product',
       title: '产品',
       describe: [
@@ -379,7 +379,7 @@ export default function jobContents() {
     },
     // 设计
     {
-      className: 'jobCard sm:col-span-2 md:col-span-1 bg-gradient-to-b from-red-400 to-red-200',
+      className: 'jobCard sm:col-span-2 md:col-span-1',
       key: 'design',
       title: '设计',
       describe: [

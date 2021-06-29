@@ -95,11 +95,11 @@ export default function JobModal(props) {
                   job.jobList.map((j, index) => {
                   return (
                     <li className="bg-white relative border border-gray-300 mb-4 rounded-lg cursor-pointer group hover:shadow-md" key={index}>
-                      <div className="flex flex-wrap sm:flex-nowrap justify-between w-full px-4 py-2 sm:px-8 sm:py-4 text-left relative" onClick={() => handleSelect(index+'')}>
+                      <div className="flex flex-wrap sm:flex-nowrap justify-between w-full px-3 py-2 sm:px-8 sm:py-4 text-left relative" onClick={() => handleSelect(index+'')}>
                         <p className="w-full sm:w-auto text-base sm:text-lg group-hover:text-blue-600">{j.title}</p>
                         <p className="w-full sm:w-auto flex items-center text-gray-400">
                           <span className="text-sm mr-4">{j.base}</span>
-                          <img className={`w-5 h-5 transition-all duration-300 absolute right-2 top-5 ${selected.match(index) ? 'transform -rotate-180' : ''}`} src="down.svg"></img>
+                          <img className={`w-3 h-3 sm:w-5 sm:h-5 transition-all duration-300 absolute right-2 top-5 ${selected.match(index) ? 'transform -rotate-180' : ''}`} src="down.svg"></img>
                         </p>
                       </div>
 
@@ -111,7 +111,7 @@ export default function JobModal(props) {
                       >
                         <div className="text-md font-bold text-blue-500 mb-2">岗位职责</div>
                         {j.responsibility.title.length ? <p>{j.responsibility.title}</p> : <></>}
-                        <ul className="pl-4 sm:pl-8 mb-4 list-disc">
+                        <ul className="pl-6 sm:pl-8 mb-4 list-disc">
                           {
                             j.responsibility.list.map(res => {
                               return <li key={res}>{res}</li>
@@ -121,7 +121,7 @@ export default function JobModal(props) {
 
                         <div className="text-md font-bold text-blue-500 mb-2">任职要求</div>
                         {j.request.title.length ? <p>{j.request.title}</p> : <></>}
-                        <ul className="pl-4 sm:pl-8 mb-4 list-decimal">
+                        <ul className="pl-6 sm:pl-8 mb-4 list-decimal">
                           {
                             j.request.list.map(req => {
                               return <li key={req}>{req}</li>
@@ -135,7 +135,7 @@ export default function JobModal(props) {
                               <>
                                 <div className="text-md font-bold text-blue-500 mb-2">加分项</div>
                                 {j.extra.title.length ? <p>{j.extra.title}</p> : <></>}
-                                <ul className="pl-4 sm:pl-8 list-decimal">
+                                <ul className="pl-6 sm:pl-8 list-decimal">
                                   {
                                     j.extra.list.map(ext => {
                                       return <li key={ext}>{ext}</li>

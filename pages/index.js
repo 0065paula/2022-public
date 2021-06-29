@@ -118,10 +118,10 @@ export default function Home() {
 
       {/* Pre Section Starts */}
       <section className="py-14 w-full bg-gray-200">
-        <div className="w-full sm:w-4/6 px-8 py-6 mx-auto rounded-2xl text-center">
+        <div className="w-full sm:w-5/6 px-8 py-6 mx-auto rounded-2xl text-center">
           <p className="titleClipText titleClipTextPurpleYellow text-2xl sm:text-3xl font-semibold mb-2">提前批，等你抢占先机</p>
           <p className="text-small text-gray-500 mb-8">7 月 1 日 ~ 7 月 31 日</p>
-          <ul className="flex flex-wrap sm:flex-nowrap mb-12 space-y-12 sm:space-y-0">
+          <ul className="flex flex-wrap sm:flex-nowrap mb-12 space-y-12 sm:space-y-0 sm:space-x-4">
             <li className="w-full sm:w-1/3 flex flex-col items-center">
               <img src="SSP.svg" width={72} />
               <h5 className="w-full mt-4 text-lg font-medium">获得 SSP offer 几率高</h5>
@@ -136,7 +136,7 @@ export default function Home() {
             </li>
           </ul>
           <Link href="https://app.mokahr.com/campus_apply/smartx/4183#/jobs">
-            <a className="block w-52 py-1 border-2 rounded-full border-blue-500 text-lg text-center text-blue-500 mx-auto hover:border-blue-500 hover:bg-blue-500" target="_blank">全部校园招聘职位 ↗</a>
+            <a className="block w-52 py-1 border-2 rounded-full border-blue-500 text-lg text-center text-blue-500 mx-auto hover:text-white hover:border-blue-500 hover:bg-blue-500" target="_blank">全部校园招聘职位 ↗</a>
           </Link> 
         </div>
       </section>
@@ -452,7 +452,7 @@ export default function Home() {
             <p className="w-full text-white">添加 SmartX 招聘小助手企业微信，大胆问出你想知道的一切。</p>
             <img className="w-32 h-32" src="qrcode_hr.png"/>
           </div>
-          <div className="sm:col-span-2 space-y-6 px-6 py-12 bg-gray-200 rounded-2xl text-gray-900">
+          <div className="sm:col-span-2 space-y-6 px-6 py-12 bg-gray-300 rounded-2xl text-gray-900">
             <h5 className="w-full text-xl font-bold mb-6">了解更多</h5>
             <p>访问 <Link href="www.smartx.com"><a className="hover:text-blue-600">www.smartx.com</a></Link>，了解产品与公司。 </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 mt-12 gap-4">
