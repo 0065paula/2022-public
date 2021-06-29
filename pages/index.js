@@ -81,7 +81,7 @@ export default function Home() {
               height={32}
             />
             {/* Link to Moka */}
-            <Link href="https://app.mokahr.com/campus_apply/smartx/4183#/jobs">
+            <Link href="https://app.mokahr.com/campus_apply/smartx/4183">
               <a className="text-sm md:text-base font-medium leading-7 text-right text-gray-900 hover:text-blue-500" target="_blank">全部校园招聘职位 ↗</a>
             </Link>        
         </div>       
@@ -89,7 +89,7 @@ export default function Home() {
       {/* Top Nav Ends */}
 
       {/* Hero Section Starts */}
-      <section className="heroSection sm:h-screen w-screen pt-48 pb-16 sm:pb-0 px-4">
+      <section className="heroSection sm:h-screen pt-48 pb-16 sm:pb-0 px-4">
         {/* Heading Content Starts */}
         <div className="relative flex flex-col space-y-10 items-center justify-center py-6 md:py-10 lg:py-12 bg-white bg-opacity-90 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl min-w-max backdrop-filter backdrop-blur-sm">
           <div className="w-60 h-40">
@@ -135,7 +135,7 @@ export default function Home() {
               <h5 className="w-full mt-4 text-lg font-medium">一周内完成面试流程，流程快效率高</h5>
             </li>
           </ul>
-          <Link href="https://app.mokahr.com/campus_apply/smartx/4183#/jobs">
+          <Link href="https://app.mokahr.com/campus_apply/smartx/4183">
             <a className="block w-52 py-1 border-2 rounded-full border-blue-500 text-lg text-center text-blue-500 mx-auto hover:text-white hover:border-blue-500 hover:bg-blue-500" target="_blank">全部校园招聘职位 ↗</a>
           </Link> 
         </div>
@@ -425,7 +425,7 @@ export default function Home() {
               <div className="text-xl font-semibold text-gray-900">收获 Offer</div>
             </div>
             <div className="sm:col-span-5">
-              <Link href="https://app.mokahr.com/campus_apply/smartx/4183#/jobs">
+              <Link href="https://app.mokahr.com/campus_apply/smartx/4183">
                 <a className="block text-base text-center text-white px-8 py-2 bg-blue-600 rounded-full hover:bg-blue-500" target="_blank">立即投递简历 ↗</a>
               </Link>
               <div className="text-sm text-center text-gray-700 text-opacity-60 mt-2">
