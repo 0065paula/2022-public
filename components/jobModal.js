@@ -44,7 +44,7 @@ export default function JobModal(props) {
             {
               job.describe.length
                 ? (
-                  <div className="text-lg">
+                  <div className="text-md sm:text-lg">
                     {
                       job.describe.map(desc => {
                         return (
@@ -68,7 +68,7 @@ export default function JobModal(props) {
                         return (
                           <>
                             <div className="mb-8">
-                              <p className="text-justify text-gray-900 text-opacity-60 mb-2">{article.preTitle}</p>
+                              <p className="text-sm sm:text-md text-justify text-gray-900 text-opacity-60 mb-2">{article.preTitle}</p>
                                 <Ref
                                   link={article.link}
                                   title={article.title}

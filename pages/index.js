@@ -24,10 +24,15 @@ export default function Home() {
   }, [])
 
   return (
-    <div id="top" className="bg-gray-100 overflow-x-hidden">
+    <>
+    <Head>
+      <title>SmartX 2022 校园招聘</title>
+    </Head>
+
+    <div id="top" className="bg-gray-100">
       {/* Top Nav Starts */}
       <div className="fixed z-20 bg-gray-100 bg-opacity-60 w-screen backdrop-filter backdrop-blur-xl">
-        <div className="max-w-screen-xl flex items-center justify-between px-4 py-2 sm:px-8 sm:py-7 mx-auto">
+        <div className="max-w-screen-xl flex items-center justify-between px-4 py-0 sm:px-8 sm:py-4 mx-auto">
             {/* SmartX Logo */}
             <Link href="#top">
               <img
@@ -45,7 +50,7 @@ export default function Home() {
                 <a className="text-sm md:text-base font-medium leading-7 text-right text-gray-900 hover:text-blue-500" target="_blank">全部校园招聘职位 ↗</a>
               </Link>
               <Link href="https://app.mokahr.com/m/candidate/applications/deliver-query/smartx">
-                <a className="text-sm md:text-base leading-7 text-right text-gray-500 hover:text-blue-500" target="_blank">查询招聘进展</a>
+                <a className="text-sm md:text-base leading-7 text-right text-gray-500 hover:text-blue-500" target="_blank">查询招聘进展 ↗</a>
               </Link>  
               <Link href="#assist">
                 <a className="scrollSmooth text-sm md:text-base leading-7 text-right text-gray-500 hover:text-blue-500 ">添加招聘小助手</a>
@@ -56,22 +61,23 @@ export default function Home() {
       {/* Top Nav Ends */}
 
       {/* Hero Section Starts */}
-      <section className="heroSection sm:h-screen pt-48 pb-16 sm:pb-0 px-4">
+      <section className="heroSection sm:h-screen pb-16 sm:pb-0 px-4">
         {/* Heading Content Starts */}
-        <div className="relative flex flex-col space-y-10 items-center justify-center py-6 md:py-10 lg:py-12 bg-white bg-opacity-90 rounded-3xl mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl min-w-max backdrop-filter backdrop-blur-sm">
+        <div className="relative flex flex-col space-y-4 sm:space-y-10 items-center justify-center mx-auto w-full md:w-2/3 lg:w-2/5 max-w-xl min-w-max">
           <div className="w-60 h-40">
               <img
-                src="/hiring_logo.svg"
+                className="w-48 sm:w-60 mx-auto"
+                src="/hiring_logo.png"
                 alt="2021 SmartX 校园招聘"
                 width={240}
                 height={168}
               />
           </div>
-          <div className="px-6 py-3">
+          <div className="px-6 py-0 sm:py-3">
               <p className="text-2xl sm:text-3xl font-semibold text-center text-gray-900">一起打造 IT 世界的基础设施</p>
           </div>
           {/* Preview Badge */}
-          <div className="absolute hidden sm:block sm:-top-20 sm:-right-20 transform rotate-0 hover:-rotate-12 transition duration-50 ease-out">
+          <div className="absolute hidden sm:block sm:-top-20 sm:right-0 transform rotate-0 hover:-rotate-12 transition duration-50 ease-out">
             <img
               className="w-40 h-40"
               src="/pre_badge.png"
@@ -411,5 +417,6 @@ export default function Home() {
       </footer>
       {/* Footer Section Ends */}
     </div>
+    </>
   )
 }

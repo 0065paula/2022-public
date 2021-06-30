@@ -45,7 +45,7 @@ export default function jobContents() {
     {
       time: "2020 年 5 月",
       title: "入选全球知名市场分析公司 Forrester 超融合市场报告。",
-      link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
+      link: "https://www.smartx.com/blog/2020/05/forrester-smartx/",
       logo: "bg_20_5",
       activeIndex: 4
     },
@@ -69,6 +69,6 @@ export default function jobContents() {
       link: "https://www.smartx.com/blog/2021/05/2021-gartner-peer-insights/",
       logo: "bg_21_5",
       activeIndex: 5
-    }
+    },
   ]
 }

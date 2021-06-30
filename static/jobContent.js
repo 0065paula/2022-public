@@ -13,7 +13,7 @@ export default function jobContents() {
         {
           preTitle: '阅读知乎专栏文章，了解我们在高性能分布式存储领域进行的探索：',
           title: 'RDMA 在数据中心的可靠传输',
-          time: '预计阅读时间 5 分钟',
+          time: '预计阅读时间 11 分钟',
           link: 'https://zhuanlan.zhihu.com/p/257228128'
         }
       ],
@@ -65,7 +65,7 @@ export default function jobContents() {
         {
           preTitle: '阅读知乎专栏文章，了解我们在虚拟化领域一次故障探索中收获的经验：',
           title: 'QEMU 热迁移导致的 Windows 虚拟机 BSoD',
-          time: '预计阅读时间 5 分钟',
+          time: '预计阅读时间 4 分钟',
           link: 'https://zhuanlan.zhihu.com/p/366869641'
         }
       ],
@@ -306,7 +306,7 @@ export default function jobContents() {
         {
           preTitle: '阅读知乎专栏文章，了解 rrweb 背后的故事：',
           title: 'rrweb：打开 web 页面录制与回放的黑盒子',
-          time: '预计阅读时间 5 分钟',
+          time: '预计阅读时间 7 分钟',
           link: 'https://zhuanlan.zhihu.com/p/60639266'
         }
       ],
