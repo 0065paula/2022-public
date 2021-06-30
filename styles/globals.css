@@ -4,7 +4,7 @@
 
 .heroSection {
     background-image: url('/bg_lt.svg'),url('/bg_ct.svg'),url('/bg_lb.svg'),url('/bg_rt.svg'),url('/bg_rb.svg') ,url('/grid.png');
-    background-size: 708px,101px,503px,503px,556px, 12px;
+    background-size: 708px,101px,503px,503px,556px,24px;
     background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat;
     max-height: 800px;
     background-position: top -90px left -220px, top -90px center, bottom 80px left -80px, top 20px right -50px, bottom 60px right -50px, top left;
