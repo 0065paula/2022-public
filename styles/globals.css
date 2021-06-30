@@ -162,6 +162,14 @@
     @apply text-2xl sm:text-3xl font-semibold text-gray-900 ;
 }
 
+p + .resList {
+    @apply list-disc;
+}
+
+.resList {
+    @apply list-decimal;
+}
+
 .visionCardWrapper {
     border-image: url('/pattern.png');
     border-image-slice: 20;

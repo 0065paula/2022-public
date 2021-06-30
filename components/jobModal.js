@@ -111,7 +111,7 @@ export default function JobModal(props) {
                       >
                         <div className="text-md font-bold text-blue-500 mb-2">岗位职责</div>
                         {j.responsibility.title.length ? <p>{j.responsibility.title}</p> : <></>}
-                        <ul className="pl-6 sm:pl-8 mb-4 list-disc">
+                        <ul className="resList pl-6 sm:pl-8 mt-2 mb-4">
                           {
                             j.responsibility.list.map(res => {
                               return <li key={res}>{res}</li>
